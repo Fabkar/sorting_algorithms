@@ -53,7 +53,7 @@ void cocktail_sort_list(listint_t **list)
 	int flag = 0;
 	listint_t *tmp, *head;
 
-	if (!(*list) && !(list))
+	if (!list || !(*list) || (!((*list)->prev) && !((*list)->next)))
 		return;
 	head = *list;
 	while (flag == 0)
